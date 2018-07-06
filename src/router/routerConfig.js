@@ -6,3 +6,5 @@ import {LoginLayout} from "../component/login/layout/login-layout"
 const RouterConfig = createStackNavigator({
   Login: { screen: LoginLayout }
 });
+
+export {RouterConfig}
