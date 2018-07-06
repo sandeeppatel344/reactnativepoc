@@ -1,6 +1,6 @@
 import React from "react";
-const submitForm = (value)=>{
+export const submit = (value)=>{
 console.log(value)
 }
 
-export {submitForm}
+ 

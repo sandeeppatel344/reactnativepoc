@@ -1,4 +1,4 @@
-const validate = values => {
+export const validate = values => {
   const errors = {};
 
   if (!values.fname) {
@@ -8,4 +8,3 @@ const validate = values => {
   return errors;
 };
 
-export {validate}

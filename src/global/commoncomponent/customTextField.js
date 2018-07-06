@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, TextInput } from 'react-native';
+import { View, TextInput,Text } from 'react-native';
 
-const customTextField = ({ label, type, passwordField, meta: { touched, error }, input: { value, onChange } }) => {
+export const customTextField = ({ label, type, passwordField, meta: { touched, error }, input: { value, onChange } }) => {
 	return (
 		<View>
 			<Text>{label}</Text>
@@ -17,4 +17,4 @@ const customTextField = ({ label, type, passwordField, meta: { touched, error },
 	);
 };
 
-export { customTextField };
+

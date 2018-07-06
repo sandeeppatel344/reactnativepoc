@@ -1,9 +1,9 @@
 import React from "react";
 import {View,Button} from "react-native";
 import {Field,reduxForm} from "redux-form";
-import {CustomTextbox} from "../../../global/commoncomponent/customTextField";
-import {CustomCheckbox} from "../../../global/commoncomponent/customTextField";
-import {SubmitForm} from "../functions/submitform";
+import {customTextField} from "../../../global/commoncomponent/customTextField";
+import {customCheckBox} from "../../../global/commoncomponent/customCheckbox";
+import {submit} from "../functions/submitform";
 import {Validate} from "../functions/validation"
 
 const LoginLayout = (props)=>{
@@ -11,10 +11,10 @@ const LoginLayout = (props)=>{
 
     return (
         <View>
-            <Field type="numeric" label="Mobile No" name="mobileno" component={CustomTextbox}/>
-            <Field type="default" label="Password" name="password" passwordField={true} component={CustomTextbox}/>
-            <Field lable="Keep me login" component={CustomCheckbox}/>
-            <Button title="Login" onPress={()=>{handleSubmit(SubmitForm)}}/>
+            <Field type="numeric" label="Mobile No" name="mobileno" component={customTextField}/>
+            <Field type="default" label="Password" name="password" passwordField={true} component={customTextField}/>
+            <Field lable="Keep me login" name="keeplogin" component={customCheckBox} />
+            <Button title="Login" onPress={handleSubmit(submit)}/>
         </View>
     )
 }
@@ -22,4 +22,4 @@ const LoginLayout = (props)=>{
 export default reduxForm({
     form:"loginform",
     Validate
-})
+})(LoginLayout)

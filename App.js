@@ -9,7 +9,8 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import {RouterConfig} from "./src/router/routerConfig"
-
+import { Provider } from "react-redux";
+import stores from "./src/store/reduxstore"
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -28,7 +29,9 @@ export default class App extends Component {
         
         <Text style={styles.instructions}>{instructions}</Text>
       </View>*/
+   <Provider store={stores}>
       <RouterConfig/>
+     </Provider>
     );
   }
 

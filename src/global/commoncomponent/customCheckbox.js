@@ -1,13 +1,15 @@
-const customCheckBox = ({ input, label }) => {
+import React from 'react';
+import CheckBox from 'react-native-checkbox';
+export const customCheckBox = ({ input, lable }) => {
+  console.log(input)
   return (
   
-      <Checkbox
-        label={label}
-        checked={input.value ? true : false}
-        onChange={(e, { checked }) => input.onChange(checked)}
-      />
+  <CheckBox
+  label={lable}
+  checked={false}
+  onChange={(checked) => input.onChange(checked)}
+/>
    
   );
 };
 
-export {customCheckBox}

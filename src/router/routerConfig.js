@@ -1,10 +1,11 @@
 import React from "react";
 import {createStackNavigator} from "react-navigation"
-import {LoginLayout} from "../component/login/layout/login-layout"
+import LoginLayout from "../component/login/layout/login-layout"
 
 
-const RouterConfig = createStackNavigator({
+export const RouterConfig = createStackNavigator({
   Login: { screen: LoginLayout }
+},{
+       initialRouteName: 'Login',
 });
 
-export {RouterConfig}
